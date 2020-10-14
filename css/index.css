@@ -1,0 +1,220 @@
+.swiper-container,.swiper-wrapper,.swiper-slide{
+	width: 100%;
+	height: 100%;
+}
+/* body{
+	opacity: 0;
+} */
+.download{
+	width: 4.7rem;
+	position: absolute;
+	left: 5.6rem;
+	bottom: 5.7rem;
+}
+.s1,.s2,.s3,.s4,.s5{
+	background: url(../img/bg1.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+
+/* .anD{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 111;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	pointer-events: none;
+} */
+.midD{
+		width: 16rem;
+		height: 25.5rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+		-webkit-transform: translateY(-50%);
+}
+.p1-1{
+    width: 13.45rem;
+	position: absolute;
+left: 1.5rem;
+    top: 3.3rem;
+}
+.p1-2{
+    width: 12.075rem;
+	position: absolute;
+    left: 2rem;
+    top: 7.1rem;
+	visibility: visible; 
+}
+.p1-3{
+    width: 3.525rem;
+	position: absolute;
+    left: 6.2rem;
+    top: 16.5rem;
+	visibility: visible;
+}
+.p1-4{
+    width: 7.375rem;
+	position: absolute;
+    left: 4.3rem;
+    top: 19rem;
+	visibility: visible; 
+}
+
+.p2-1{
+     width: 11.15rem;
+	position: absolute;
+left: 2.3rem;
+    top: 4.5rem;
+	
+}
+.p2-2{
+    width: 9.25rem;
+	position: absolute;
+left: 3.1rem;
+    top: 7.9rem;
+	
+}
+.p2-3{
+    width: 9.25rem;
+	position: absolute;
+    left: 3.1rem;
+    top: 10.2rem;
+	
+}
+.p2-4{
+     width: 9.25rem;
+	position: absolute;
+    left: 3.1rem;
+    top: 15.4rem;
+	
+}
+.p2-5{
+    width: 9.25rem;
+	position: absolute;
+    left: 3.1rem;
+    top: 19.6rem;
+	visibility: hidden; 
+}
+.p2-6{
+	width: 16rem;
+	position: absolute;
+	left: 0rem;
+	top: 0rem;
+	
+}
+.swiper-slide-active .xx{
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	-webkit-animation: fadeIn 1s 1s linear both ;
+}
+.p3-1{
+	width: 16rem;
+	position: absolute;
+    left: 0rem;
+    top: 0rem;
+	
+}
+.p3-2{
+    width: 12.425rem;
+	position: absolute;
+    left: 1.8rem;
+    top: 6.8rem;
+	
+}
+.swiper-slide-active .shou{
+	opacity: 0;
+	z-index: 2;
+    width: 1.4rem;
+    position: absolute;
+      left: 2rem;
+    top: 11.2rem;
+    -webkit-animation: shou 2s 1.4s linear infinite;
+}
+@-webkit-keyframes shou{
+	from{
+		opacity: 1;
+		-webkit-transform: translate(0,0);
+	}
+	50%{
+		opacity: 1;
+
+		-webkit-transform: translate(0.7rem,0rem);
+
+	}
+	to{
+		opacity: 1;
+
+		-webkit-transform: translate(0,0);
+
+	}
+}
+.p4-1{
+    width: 7.27rem;
+	position: absolute;
+    left: 3.5rem;
+    top: 7.5rem;
+	
+}
+.p4-2{
+      width: 8.525rem;
+	position: absolute;
+    left: 3.5rem;
+    top: 10rem;
+	
+}
+.p4-3{
+     width: 5.375rem;
+	position: absolute;
+    left: 3.5rem;
+    top: 12.5rem;
+}
+.p4-4{
+    width: 6.675rem;
+	position: absolute;
+    left: 3.5rem;
+    top: 15rem;
+}
+.p4-5{
+    width: 7.3rem;
+	position: absolute;
+    left: 3.5rem;
+    top: 17.5rem;
+	
+}
+.p4-6{
+    width: 9.825rem;
+	position: absolute;
+    left: 3.5rem;
+    top: 20rem;
+}
+.p4-7{
+	width: 16rem;
+	position: absolute;
+left: 0rem;
+    top: 0rem;
+	
+}
+
+.p5-1{
+    width: 7.275rem;
+	position: absolute;
+    left: 4.2rem;
+    top: 9.9rem;
+	
+}
+.p5-2{
+    width: 7.275rem;
+	position: absolute;
+    left: 4.2rem;
+    top: 12.1rem;
+}
+.p5-3{
+    width: 4.05rem;
+	position: absolute;
+    left: 5.9rem;
+    top: 21.1rem;
+	
+}

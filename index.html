@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<title></title>
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<script type="text/javascript">
+			! function(e, t) {
+				var n, i = (navigator.userAgent, t.documentElement),
+					o = function() {
+						var e = i.getBoundingClientRect().width || 320,
+							t = e / 320 * 20;
+						i.style.fontSize = t + "px";
+					};
+				e.addEventListener("resize", function() {
+					clearTimeout(n), n = setTimeout(o, 100)
+				}, !1), e.addEventListener("pageshow", function(e) {
+					e.persisted && (clearTimeout(n), n = setTimeout(o, 100))
+				}, !1), o()
+			}(window, document);
+		</script>
+		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="css/ani.css"/>
+		<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=d73bd57f380cce66082ce2b7b9a94fd3"></script> 
+
+		<style>
+						/*音乐*/
+			.music-box {
+			    position: fixed;
+			    right: 0.4rem;
+			    top: 0.4rem;
+			    width: 1.3rem;
+			    height: 1.3rem;
+			    z-index: 3;
+			}
+			.pan {
+				position: absolute;
+				left: 0;
+				top: 0;
+			      width: 1.5rem;
+			    /*height: 1.5rem;*/
+			    z-index: 1;
+			}
+			.pand{
+				-webkit-animation: roz 6s linear infinite;
+
+			}
+			@-webkit-keyframes roz{
+				from{
+					-webkit-transform: rotateZ(0);
+				}
+				to{
+					-webkit-transform: rotateZ(360deg);
+				}
+			}
+			.pan2{
+				position: absolute;
+				left: 0;
+				top: 0;
+			    width: 1.5rem;
+			    /*height: 1.5rem;*/
+				opacity: 0;
+			}
+			
+			.pause *{
+				-webkit-animation: none;
+			}
+			.panx{
+				opacity: 1;
+			}
+			.pany{
+				opacity: 0;
+			}
+			#container{
+			     width: 11.1rem;
+					height: 13rem;
+					position: absolute;
+					left: 2.5rem;
+					top: 7.2rem;
+			}
+			.amap-marker-label {
+					position: absolute;
+					top: -0.7rem;
+					left: -2.4rem;
+					z-index: 2;
+					/* border: 1px solid blue; */
+					/* background-color: white; */
+					white-space: nowrap;
+					cursor: default;
+					padding: 3px;
+					font-size: 0.5rem;
+					color: #1758DD;
+					line-height: 14px;
+					font-weight: bold;
+							margin-left: -4.3rem;
+					margin-top: -1.9rem;
+					padding: 0.3rem;
+					border-radius: 10px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<audio src="music/bgm.mp3" id="bgm" loop></audio>
+		 <div class="music-box">
+			<img src="img/music.png" alt="" class="pan" />
+			<img src="img/music1.png" alt="" class="pan2" />
+		</div>
+		<div class="swiper-container">
+	        <div class="swiper-wrapper">
+	        	
+	        	<div class="swiper-slide s1">
+							<div class="midD">
+								<img src="img/p1-1.png" alt="" class="p1-1 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1.6s" swiper-animate-delay="0s" />
+								<img src="img/p1-2.png" alt="" class="p1-2 ani" swiper-animate-effect="zoomInUp" swiper-animate-duration="1.6s" swiper-animate-delay="0.2s" />
+								<img src="img/p1-3.png" alt="" class="p1-3 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1.5s" />
+								<img src="img/p1-4.png" alt="" class="p1-4 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="1.8s" />
+							</div>
+						</div>
+	        	<div class="swiper-slide s2">
+							<div class="midD">
+								<img src="img/p2-6.png" alt="" class="p2-6 pw2 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="0s" />
+								<img src="img/p2-1.png" alt="" class="p2-1 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0.5s" />
+								<img src="img/p2-2.png" alt="" class="p2-2 ani pw1" swiper-animate-effect="zoomIn	" swiper-animate-duration="1s" swiper-animate-delay="1s" />
+								<img src="img/p2-3.png" alt="" class="p2-3 ani pw1" swiper-animate-effect="zoomIn	" swiper-animate-duration="1s" swiper-animate-delay="1.5s" />
+								<img src="img/p2-4.png" alt="" class="p2-4 ani pw1" swiper-animate-effect="zoomIn	" swiper-animate-duration="1s" swiper-animate-delay="2s" />
+								<img src="img/p2-5.png" alt="" class="p2-5 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="2.5s" />
+							</div>
+						</div>
+				
+	        	<div class="swiper-slide s3">
+							<div class="midD">
+								<img src="img/p3-1.png" alt="" class="p3-1 ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0s" />
+								<div class="xx">
+									<img src="img/p3-2.png" alt="" class="p3-2 pw3 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1s" />
+									<div id="container" class=" ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1s"></div>
+									<img src="img/shou.png" class="shou" >
+								</div>
+								
+							</div>
+	        	</div>
+	        	<div class="swiper-slide s4">
+							<div class="midD">
+								<img src="img/p4-7.png" alt="" class="p4-7 ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0s" />
+								<img src="img/p4-1.png" alt="" class="p4-1 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="1s"  />
+								<img src="img/p4-2.png" alt="" class="p4-2 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="1.5s" />
+								<img src="img/p4-3.png" alt="" class="p4-3 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="2s" />
+								<img src="img/p4-4.png" alt="" class="p4-4 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="2.5s" />
+								<img src="img/p4-5.png" alt="" class="p4-5 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="3s" />
+								<img src="img/p4-6.png" alt="" class="p4-6 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="3.5s" />
+							</div>
+	        	</div>
+	        	<div class="swiper-slide s5">
+							<div class="midD">
+								<img src="img/p5-1.png" alt="" class="p5-1 ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1.6s" swiper-animate-delay="0s"/>
+								<img src="img/p5-3.png" alt="" class="p5-3 ani" swiper-animate-effect="fadeIn" swiper-animate-duration="1s" swiper-animate-delay="1s" />
+								
+
+							</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
+
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate1.0.2.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+	// window.onload=wxready();
+	window.init = function(){
+				var map = new AMap.Map('container', {
+					center:[116.403436,39.619613],
+					zoom:15
+				});
+				
+				var marker = new AMap.Marker({
+					position: new AMap.LngLat(116.403436,39.619613),   // 经纬度对象，也可以是经纬度构成的一维数组[116.39, 39.9]
+					title: '北京月季文化产业园'
+					});
+				map.add(marker);
+				marker.setLabel({
+					offset: new AMap.Pixel(20, 20),//修改label相对于maker的位置
+					content: "北京月季文化产业园",
+				});
+				marker.on('click',function(e){
+						marker.markOnAMAP({
+								name:'北京月季文化产业园',
+								position:marker.getPosition()
+								
+						})
+				})
+				map.addControl(new AMap.ToolBar());
+				if(AMap.UA.mobile){
+						document.getElementById('button_group').style.display='none';
+				}
+				text.setMap(map);
+		}
+		
+		init();
+</script>
+

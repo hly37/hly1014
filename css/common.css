@@ -1,0 +1,196 @@
+/*common mobile fullscreen*/
+body,div,ul,li,h1,h2,h3,h4,h5,dl,dt,dd,p,input,textarea{
+    margin: 0;
+    padding: 0;
+    font-family: '微软雅黑';
+    color: white;
+    font-size: 0.7rem;
+}
+* {
+-webkit-tap-highlight-color: transparent;
+outline: none;
+}
+*:not(input,textarea) { -webkit-user-select: none; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-touch-callout: none; -webkit-text-size-adjust: none; }
+
+
+ul,li{
+    list-style: none;
+}
+img{
+    border: none;
+    display: block;
+}
+html,body {
+    height: 100%;
+    display:block;
+    color: #434343;
+    background: #fff;
+    -webkit-overflow-scrolling:touch;
+    overflow: hidden;
+}
+body{
+    /*overflow-y:hidden;*/
+    overflow-x: hidden;
+    position: relative;
+    background: #fff;
+    overflow-y: scroll;
+}
+a{
+    text-decoration: none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+input,textarea,button{outline: none;border:none;}
+.clearfix:after{display: block;clear: both;height: 0;visibility: hidden;font-size: 0;line-height: 0;content: "";}
+.clearfix{zoom:1;}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.page{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    display: none;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+.center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+}
+.center1{
+    position: absolute;
+    width: 5.7rem;
+    left: 0%;
+    top: 0%;
+}
+.more{
+    position: absolute;
+    left: 58%;
+    top: 80%;
+    /*-webkit-transform: translate(-50%,-50%);*/
+    height: 2rem;
+    width: 5rem;
+    overflow: hidden;
+    -webkit-animation: more 1s linear infinite;
+}
+.swiper-slide{
+	overflow: hidden;
+	position: relative;
+}
+
+
+.out{
+	z-index: -1;
+}
+.zi_in{
+	-webkit-animation: zi_in_Move 1s ease-out; /*ease-in-out 动画开始慢结束快    ease-out反之  */
+	-webkit-animation-fill-mode: forwards;/*动画停止在最后的状态*/
+}
+@-webkit-keyframes more {
+    0%{
+        width: 5rem;
+    }
+    100%{
+        width: 5.8rem;
+    }
+}
+@-webkit-keyframes zi_in_Move {
+
+    0% {
+    	opacity: 0; /*初始状态 透明度为0*/
+    }
+    
+    100% {
+    	opacity: 1; /*初始状态 透明度为0*/
+    }
+   
+}
+.fangDa{
+	-webkit-animation: fangDa_Move 1s ease-out; /*ease-in-out 动画开始慢结束快    ease-out反之  */
+	-webkit-animation-fill-mode: forwards;/*动画停止在最后的状态*/
+}
+@-webkit-keyframes fangDa_Move {
+
+    0% {
+    	-webkit-transform: scale(1);
+    	
+    }
+    
+    100% {
+    	-webkit-transform: scale(1.2);
+    	
+    }
+   
+}
+.p6_fangDa{
+	-webkit-animation: p6_fangDa_Move 1s ease-out; /*ease-in-out 动画开始慢结束快    ease-out反之  */
+	-webkit-animation-fill-mode: forwards;/*动画停止在最后的状态*/
+}
+@-webkit-keyframes p6_fangDa_Move {
+
+    0% {
+    	-webkit-transform: scale(1);
+    	opacity: 1; /*初始状态 透明度为0*/
+    }
+    
+    100% {
+    	-webkit-transform: scale(1.2);
+    	opacity: 0; /*初始状态 透明度为0*/
+    }
+   
+}
+
+.swiper-container .page{
+	display: block;
+}
+
+.prevTouch{
+	pointer-events: none;
+}
+
+
+.swiper-slide::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0.9rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    left: 7.3rem;
+		z-index: 11;
+    background: url(../img/down.png) no-repeat;
+    background-size: 100%;
+    -webkit-animation: after 1.5s linear infinite;
+}
+@-webkit-keyframes after {
+    from{
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+    to{
+        opacity: 0;
+        -webkit-transform: translateY(0.4rem);
+    }
+}
+@-webkit-keyframes after1 {
+    from{
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+    to{
+        opacity: 0;
+        -webkit-transform: translateY(-0.8rem);
+    }
+}
